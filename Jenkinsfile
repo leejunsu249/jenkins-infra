@@ -10,7 +10,7 @@ node{
              withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]){
                sh "git config --global user.email 75758585@naver.com"
                sh "git config --global user.name leejunsu249"
-               sh "sed -i 's/node-gen:.*\$/node-gen:${DOCKERTAG}/g' auth-depl.yaml"
+               sh "sed -i 's/wnstn385/node-gen:.*\$/wnstn385/node-gen:${DOCKERTAG}/g' auth-depl.yaml"
                sh "git add auth-depl.yaml"
                sh "git commit -m '[UPDATE] auth-depl ${DOCKERTAG} image versioning'"
                sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/jenkins-infra.git HEAD:master"
