@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: wnstn385/node-gen:latest
+          image: wnstn385/node-gen:43
           env:
             - name: MONGO_URI
               value: 'mongodb://auth-mongo-srv:27017/auth'
